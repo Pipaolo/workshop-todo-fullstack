@@ -8,11 +8,3 @@ export const CreateTodoSchema = z.object({
 });
 
 export type CreateTodoSchema = z.infer<typeof CreateTodoSchema>;
-
-export const UpdateTodoSchema = CreateTodoSchema.extend({
-  id: z.number({
-    required_error: "This field is required.",
-  }),
-});
-
-export type UpdateTodoSchema = z.infer<typeof UpdateTodoSchema>;
