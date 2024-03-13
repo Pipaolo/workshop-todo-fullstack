@@ -17,39 +17,14 @@ export const TodoListListItem = ({ todo }: Props) => {
 
   // Function to toggle the completion status of a todo item
   const onMarkAsActionPressed = async () => {
-    try {
-      // Send a PATCH request to update the todo's completion status
-      await fetch(`/todo/${todo.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: todo.name, // Include the todo's name
-          isCompleted: !todo.isCompleted, // Toggle the isCompleted status
-        }),
-      });
-      alert("Todo updated successfully"); // Show success message
-    } catch (error) {
-      alert("Failed to update todo"); // Show error message on failure
-    }
-
-    router.refresh(); // Refresh the page to reflect changes
+    // TASK: Send a PATCH request to update the todo's completion status
+    // BONUS: Handle errors and display an appropriate message
   };
 
   // Function to delete a todo item
   const onDeleteActionPressed = async () => {
-    try {
-      // Send a DELETE request to remove the todo item
-      await fetch(`/todo/${todo.id}`, {
-        method: "DELETE",
-      });
-      alert("Todo deleted successfully"); // Show success message
-    } catch (error) {
-      alert("Failed to delete todo"); // Show error message on failure
-    }
-
-    router.refresh(); // Refresh the page to reflect changes
+    // TASK: Send a DELETE request to remove the todo item
+    // BONUS: Handle errors and display an appropriate message
   };
 
   // Render the todo item with its name, a checkbox indicating its completion status, and action buttons

@@ -15,19 +15,10 @@ export const TodoListHeader = () => {
 
   // Handler function for form submission
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-
-    // Send a POST request to the '/todo/' endpoint with the new todo name
-    await fetch("/todo/", {
-      method: "POST",
-      body: JSON.stringify({ name }), // Convert the todo name into JSON format
-    });
-
-    // Reset the input field to an empty string after submission
-    setName("");
-
-    // Refresh the current page to reflect the new todo item
-    router.refresh();
+    // TASK: Prevent the default form submission behavior
+    // TASK: Use fetch API to send a POST request to '/todo/' endpoint with the new todo name
+    // TASK: Reset the input field after submission
+    // TASK: Refresh the page to reflect the new todo item
   };
 
   // Render the form component
